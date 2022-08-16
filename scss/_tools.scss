@@ -1,0 +1,18 @@
+@import "_variables.scss";
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  border-radius: 1.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  color: $text-color;
+  background: $third-color;
+  border: 1px solid black;
+}
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: auto;
+}

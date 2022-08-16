@@ -1,0 +1,313 @@
+@import "_reset.scss";
+@import "_mixins.scss";
+@import "_variables.scss";
+@import "_tools.scss";
+
+@font-face {
+  font-family: "nautilus_pompiliusregular";
+  src: url("/assets/fonts/nautilus-webfont.woff2");
+}
+
+// Header
+.header {
+  padding: 1.3rem;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  &__icon {
+    width: 195px;
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  &__ul {
+    display: flex;
+    gap: 2.5rem;
+  }
+
+  &__li {
+    list-style: none;
+  }
+  &__button {
+    background-color: $special-color;
+    color: $white;
+    padding: 0.8rem;
+    width: 7rem;
+    border-radius: 10px;
+    border: none;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $main-color;
+    }
+  }
+}
+
+// Main
+.main {
+  .hero {
+    background-color: $main-color;
+
+    &__container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__container__title {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 3rem;
+
+      h1 {
+        color: $white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 77px;
+        line-height: 88px;
+        font-weight: 800;
+      }
+
+      a {
+        background-color: $white;
+        color: $main-color;
+        border: 1px solid $white;
+        padding: 0.8rem;
+        border-radius: 10px;
+        width: 10rem;
+        text-align: center;
+        font-weight: 800;
+        font-size: 1rem;
+
+        &:hover {
+          background-color: $main-color;
+          color: $white;
+        }
+      }
+    }
+
+    &__img {
+      width: 26rem;
+    }
+  }
+
+  .news {
+    background-color: $secondary-color;
+    padding-top: 4rem;
+    padding-bottom: 8rem;
+
+    &__container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .new {
+      width: 379px;
+      height: 340px;
+      background-color: white;
+
+      &__2 {
+        background-image: url("/assets/img/five-guys-bag-1-570x510-c.jpg");
+        background-position: center;
+        background-size: cover;
+      }
+
+      &__3 {
+        background-image: url("/assets/img/Spain-delivery-all-1-570x510-c.png");
+        background-position: center;
+        background-size: cover;
+      }
+
+      &__4 {
+        background-image: url("/assets/img/five-guys-full-menu-1-570x510-c.jpg");
+        background-position: center;
+        background-size: cover;
+      }
+
+      &__5 {
+        background-image: url("/assets/img/FGES_Reeses-Batido-Header-570x510-c.png");
+        background-position: center;
+        background-size: cover;
+      }
+
+      &__6 {
+        background-image: url("/assets/img/jobs-1-570x510-c.jpg");
+        background-position: center;
+        background-size: cover;
+      }
+
+      &__8 {
+        background-image: url("/assets/img/Kings-Cross-01-2-1-570x510-c.jpg");
+        background-position: center;
+        background-size: cover;
+      }
+
+      &__10 {
+        background-image: url("/assets/img/Jalapenos-Cut-1-1-570x510-c.jpg");
+        background-position: center;
+        background-size: cover;
+      }
+
+      &__12 {
+        background-image: url("/assets/img/Burger-03-1-2-570x510-c.jpg");
+        background-position: center;
+        background-size: cover;
+      }
+
+      &__7,
+      &__9,
+      &__11 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &__text {
+        color: #d21033;
+        text-transform: initial;
+        padding: 2rem;
+        font-weight: 100;
+        font-size: 2.5rem;
+        line-height: 48px;
+        font-family: "nautilus_pompiliusregular", cursive;
+        text-align: center;
+      }
+
+      &__1 {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+        text-align: center;
+        padding: 1.8rem;
+      }
+
+      &__text--special {
+        font-size: 2.5rem;
+        line-height: 48px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 900;
+      }
+
+      &__button {
+        background-color: rgba(255, 255, 255, 0.001);
+        border: 2px solid #d21033;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #d21033;
+        margin-top: 24px;
+        padding: 14px 16px;
+        border-radius: 10px;
+        font-weight: 900;
+        width: 80%;
+        transition: all 0.3s;
+
+        &:hover {
+          background-color: #d21033;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+// footer
+.footer {
+  background-color: $black;
+  padding: 2rem;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  &__top a {
+    color: #d4d4d4;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 1.5rem;
+
+    &:hover {
+      border-bottom: 1px solid #d4d4d4;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__lenguajes {
+    color: #d4d4d4;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    li {
+      list-style: none;
+
+      a {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        font-size: 0.875rem;
+
+        &:hover {
+          border-bottom: 1px solid #d4d4d4;
+        }
+      }
+    }
+  }
+
+  &__icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    a {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid white;
+      border-radius: 50%;
+      color: white;
+
+      &:hover {
+        background-color: $white;
+        color: #d21033;
+      }
+    }
+  }
+
+  &__text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: #d4d4d4;
+    margin-top: 24px;
+  }
+}
+
+svg {
+  width: 100%;
+  display: block;
+}
