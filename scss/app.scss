@@ -13,23 +13,57 @@
   padding: 1.3rem;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
+
+  .container {
+    @media screen and(max-width: 1200px) {
+      width: 95%;
+    }
+  }
+
+  &__menu {
+    color: #d21033;
+    @media screen and(max-width: 923px) {
+      display: block;
+    }
+  }
+
   &__container {
     display: flex;
     align-items: center;
     justify-content: space-around;
+
+    @media screen and(max-width: 1200px) {
+      justify-content: space-between;
+    }
   }
   &__icon {
     width: 195px;
+
+    @media screen and(max-width: 1287px) {
+      width: 140px;
+    }
   }
   &__nav {
     display: flex;
     align-items: center;
     gap: 1.5rem;
+
+    @media screen and(max-width: 1287px) {
+      gap: 1rem;
+    }
+
+    @media screen and(max-width: 923px) {
+      display: none;
+    }
   }
 
   &__ul {
     display: flex;
     gap: 2.5rem;
+
+    @media screen and(max-width: 1287px) {
+      gap: 1rem;
+    }
   }
 
   &__li {
@@ -42,6 +76,7 @@
     width: 7rem;
     border-radius: 10px;
     border: none;
+    font-family: Arial, Helvetica, sans-serif;
 
     &:hover {
       cursor: pointer;
@@ -52,13 +87,44 @@
 
 // Main
 .main {
+  &::before {
+    content: "";
+    display: block;
+    height: 40px;
+    width: 100%;
+    background-image: linear-gradient(
+        45deg,
+        #d21033 25%,
+        rgba(255, 255, 255, 0.001) 25%,
+        rgba(255, 255, 255, 0.001) 75%,
+        #d21033 75%,
+        #d21033
+      ),
+      linear-gradient(
+        45deg,
+        #d21033 25%,
+        rgba(255, 255, 255, 0.001) 25%,
+        rgba(255, 255, 255, 0.001) 75%,
+        #d21033 75%,
+        #d21033
+      );
+    background-size: calc(20px * 2) calc(20px * 2);
+    background-position: 0 0, 20px 20px;
+  }
   .hero {
     background-color: $main-color;
+    position: relative;
+    padding: 124px;
+    overflow: hidden;
 
     &__container {
       display: flex;
       align-items: center;
       justify-content: space-between;
+
+      @media screen and(max-width: 900px) {
+        justify-content: center;
+      }
     }
 
     &__container__title {
@@ -66,6 +132,12 @@
       flex-direction: column;
       align-items: flex-start;
       gap: 3rem;
+      max-width: calc(8 / 12 * 100%);
+
+      @media screen and(max-width: 990px) {
+        align-items: center;
+        text-align: center;
+      }
 
       h1 {
         color: $white;
@@ -73,6 +145,24 @@
         font-size: 77px;
         line-height: 88px;
         font-weight: 800;
+
+        @media screen and(max-width: 1300px) {
+          font-size: 65px;
+        }
+
+        @media screen and(max-width: 1120px) {
+          font-size: 55px;
+        }
+
+        @media screen and(max-width: 990px) {
+          font-size: 50px;
+          line-height: 70px;
+          text-align: center;
+        }
+
+        @media screen and(max-width: 370px) {
+          font-size: 40px;
+        }
       }
 
       a {
@@ -85,6 +175,7 @@
         text-align: center;
         font-weight: 800;
         font-size: 1rem;
+        font-family: Arial, Helvetica, sans-serif;
 
         &:hover {
           background-color: $main-color;
@@ -93,14 +184,66 @@
       }
     }
 
-    &__img {
-      width: 26rem;
+    .hero__burguer__top {
+      width: 33rem;
+      transform: translateY(-50%);
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      @media screen and(max-width: 1300px) {
+        width: 25rem;
+      }
+
+      @media screen and(max-width: 880px) {
+        width: 20rem;
+      }
+    }
+
+    .hero__burguer__bottom {
+      width: 33rem;
+
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      transform: translateY(50%);
+
+      @media screen and(max-width: 1300px) {
+        width: 25rem;
+      }
+
+      @media screen and(max-width: 880px) {
+        width: 20rem;
+      }
     }
   }
 
   .news {
+    &::before {
+      content: "";
+      display: block;
+      height: 60px;
+      width: 100%;
+      background-image: linear-gradient(
+          45deg,
+          #d21033 25%,
+          rgba(255, 255, 255, 0.001) 25%,
+          rgba(255, 255, 255, 0.001) 75%,
+          #d21033 75%,
+          #d21033
+        ),
+        linear-gradient(
+          45deg,
+          #d21033 25%,
+          rgba(255, 255, 255, 0.001) 25%,
+          rgba(255, 255, 255, 0.001) 75%,
+          #d21033 75%,
+          #d21033
+        );
+      background-size: calc(20px * 2) calc(20px * 2);
+      background-position: 0 0, 20px 20px;
+    }
     background-color: $secondary-color;
-    padding-top: 4rem;
     padding-bottom: 8rem;
 
     &__container {
@@ -108,12 +251,33 @@
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
+      padding-top: 4rem;
+
+      width: 80%;
+      max-width: 1200px;
+      margin: auto;
+
+      @media screen and (max-width: 1400px) {
+        width: 100%;
+      }
+
+      @media screen and(max-width: 717px) {
+        padding-top: 0;
+      }
     }
 
     .new {
       width: 379px;
       height: 340px;
       background-color: white;
+
+      @media screen and (max-width: 1200px) {
+        width: calc(50%);
+      }
+
+      @media screen and (max-width: 540px) {
+        width: 100%;
+      }
 
       &__2 {
         background-image: url("/assets/img/five-guys-bag-1-570x510-c.jpg");
@@ -232,6 +396,7 @@
     flex-wrap: wrap;
     gap: 2.5rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    padding-bottom: 1.5rem;
   }
 
   &__top a {
@@ -240,7 +405,10 @@
     font-size: 0.875rem;
     line-height: 32px;
     font-family: Arial, Helvetica, sans-serif;
-    margin-bottom: 1.5rem;
+
+    @media screen and(max-width: 810px) {
+      line-height: 20px;
+    }
 
     &:hover {
       border-bottom: 1px solid #d4d4d4;
@@ -257,6 +425,7 @@
     color: #d4d4d4;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 1.5rem;
 
     li {
