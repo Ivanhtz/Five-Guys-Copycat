@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: "nautilus_pompiliusregular";
-  src: url("/assets/fonts/nautilus-webfont.woff2");
+  src: url("../assets/fonts/nautilus-webfont.woff2");
 }
 
 // Header
@@ -494,7 +494,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-
+  z-index: 9;
   display: flex;
   flex-direction: column;
   align-items: center;
